@@ -1,0 +1,8 @@
+{
+  "name": "Mate (tm)",
+  "version": "0.0.1",
+  "dependencies": {
+    "lungo": "2.0.0",
+    "quojs": "2.2.0",
+  }
+}

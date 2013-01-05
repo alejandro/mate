@@ -1,0 +1,49 @@
+extends layout
+
+block header
+  nav.left.box
+    a(href="#menu", data-router="aside", data-icon="chat")
+
+  .left
+    .centered.title Mate (tm)
+
+  nav.right.box
+    a#login(href="#logout", data-router="section", data-icon="lock")
+
+
+block content
+  ul
+    li
+      h2 Hola Benjamin
+    li
+      h3 Not ready yet?
+  canvas#board(width="1900",height="1000")
+    p Your browser don't support canvas
+
+block aside
+  aside.left#menu
+    header(data-title="Chat", data-icon="pencil")
+    article.list
+      ul
+        li.active
+          a(href="#main-home", data-router="home", data-title="Inicio")
+            strong Inicio
+        li
+          a(href="#main-home", data-router="home", data-title="Inicio")
+            strong Inicio
+        li
+          a(href="#main-home", data-router="home", data-title="Inicio")
+            strong Inicio
+        li
+          a(href="#main-home", data-router="home", data-title="Inicio")
+            strong Inicio
+
+block splash
+  section#main(data-transition="slide")
+    article.active.indented.splash
+      img(src="http://numbus.co/assets/images/logoa_150x50.png")
+      form(class="rounded")
+        input(type="text", placeholder="Your username", id="txt-signup-name", value="")
+        input(type="password", placeholder="Your password", id="txt-signup-password", value="")
+        a.button.theme.anchor(href="#",data-icon="checkmark", data-icon="user") Login
+        a.button.accept.anchor(href="#home", data-router="section", data-icon="left") Regresar
