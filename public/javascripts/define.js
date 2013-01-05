@@ -23,7 +23,7 @@
   }
   
   require.config = function (cfg){
-    cfg = config
+    config = cfg
   }
 
   require.load =  function (url, id, sync){
