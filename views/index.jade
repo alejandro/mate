@@ -12,13 +12,7 @@ block header
 
 
 block content
-  ul
-    li
-      h2 Hola Benjamin
-    li
-      h3 Not ready yet?
-  canvas#board(width="1900",height="1000")
-    p Your browser don't support canvas
+  div#board(width="1900",height="1000",style="margin:0;cursor:crossair")
 
 block aside
   aside.left#menu
@@ -45,5 +39,5 @@ block splash
       form(class="rounded")
         input(type="text", placeholder="Your username", id="txt-signup-name", value="")
         input(type="password", placeholder="Your password", id="txt-signup-password", value="")
-        a.button.theme.anchor(href="#",data-icon="checkmark", data-icon="user") Login
+        a.button.theme.anchor(href="#", data-action="login",data-icon="checkmark", data-icon="user") Login
         a.button.accept.anchor(href="#home", data-router="section", data-icon="left") Regresar

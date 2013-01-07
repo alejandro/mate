@@ -18,8 +18,8 @@
   }
 
   function require(name){
-     if (!modules[name]) throw new Error(name + ' is not defined')
-      return modules[name]
+    if (!modules[name]) throw new Error(name + ' is not defined')
+    return modules[name]
   }
   
   require.config = function (cfg){

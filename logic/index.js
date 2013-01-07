@@ -6,4 +6,9 @@ var sio = require('socket.io')
   , chat = io.of('/chat')
 
 
+io.sockets.on('connection', function(socket){
+  socket.on('canvas:point', function (e){ // todo make this scalable
+    io.sockets.emit('canvas:dpoint', e)
+  })
+})
 }

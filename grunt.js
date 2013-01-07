@@ -31,6 +31,13 @@
           ],
           dest: 'public/build/<%= pkg.name %>.js'
         },
+        draw: {
+          src: [
+            '<banner:meta.banner>',
+            'public/javascripts/app.draw.js'
+          ],
+          dest: 'public/build/<%= pkg.name %>.app.js'
+        },
         css: {
           src:  [
             'public/components/lungo/lungo.css',
@@ -46,6 +53,10 @@
         dist: {
           src: ['<banner:meta.banner>', '<config:concat.dist.dest>'],
           dest: 'public/build/<%= pkg.name %>.min.js'
+        },
+        draw: {
+          src: ['<banner:meta.banner>', '<config:concat.draw.dest>'],
+          dest: 'public/build/<%= pkg.name %>.app.min.js'
         }
       },
       cssmin:{
