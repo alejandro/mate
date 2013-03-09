@@ -19,7 +19,7 @@ app.configure(function(){
   app.use(express.bodyParser())
   app.use(express.methodOverride())
   app.use(app.router)
-  app.use(express.static(path.join(__dirname, 'public')))
+  app.use(express.static(path.join(__dirname, '../app')))
 })
 
 app.configure('development', function(){
@@ -31,9 +31,7 @@ app.get('/', routes.index)
 
 
 
-var server = http.createServer(app).listen(app.get('port'), function(){
+http.createServer(app).listen(app.get('port'), function(){
+  require('./logic')(this, app)
   console.log("Express server listening on port " + app.get('port'));
 });
-
-
-require('./logic')(server, app)

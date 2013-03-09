@@ -1,10 +1,9 @@
 var width = stage.options.width  
   , buttons = []
   , blobs = []
-  , prev = { x: 0, y: 0}
+  , prev = { x: 0, y: 0 }
 
-function drawTopMenu(x, y){
-  console.log('drawing menu')
+function drawTopMenu(x, y) {
   var sectors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
     , names = ['color', 'text', 'send', 'chat', 'name', 'call', 'put']
     , sectorWidth = (x / sectors.length)
